@@ -12,6 +12,7 @@ namespace OOP_StudentProgram
         private string _lastName;
         private string _gender;
         private string _major;
+        private Dates _birthdate; //composition
 
         public Student()
         {
@@ -87,6 +88,18 @@ namespace OOP_StudentProgram
         public string getMajor()
         {
            //retrun major attribute
+        }
+
+        public string setBirthdat(Dates s)
+        {
+            //assgin dates object to birthdate attribute
+            //return true
+        }
+
+        public string getBirthdate()
+        {
+            //return birthdate in a string format.
+            // 00/00/0000
         }
     }
 }
