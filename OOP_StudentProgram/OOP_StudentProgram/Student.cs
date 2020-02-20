@@ -7,6 +7,7 @@ namespace OOP_StudentProgram
 {
     public class Student
     {
+        //attributes
         private string _firstName;
         private string _lastName;
         private string _gender;
@@ -14,47 +15,78 @@ namespace OOP_StudentProgram
 
         public Student()
         {
-            throw new System.NotImplementedException();
+          //constructor
         }
 
-        public void setFirstName(string s)
+        public bool setFirstName(string s)
         {
-            throw new System.NotImplementedException();
+           //set rules sets for the students first name
+           
+            /*
+             * student's first name can be whatever 
+             * assign the string to the first name attribute
+             * return true
+             */
         }
 
-        public void getFirstName()
+        public string getFirstName()
         {
-            throw new System.NotImplementedException();
+            //return students first name as a string 
         }
 
-        public void setLastName(string s)
+        public bool setLastName(string s)
         {
-            throw new System.NotImplementedException();
+            //set rules sets for the students last name
+
+            /*
+             * student's last name can be whatever 
+             * assign the string to the last name attribute
+             * return true
+             */
+
+           
         }
 
-        public void getLastName()
+        public string getLastName()
         {
-            throw new System.NotImplementedException();
+            //return students last name as a string 
         }
 
-        public void setGender(string s)
+        public bool setGender(string s)
         {
-            throw new System.NotImplementedException();
+            //set rules sets for the students gender
+
+            /*
+             * if input match male, man. assing 'm' to gender attribute and return true
+             * if input match female or woman. assign 'f' to gender attribute and return true
+             * else return false;
+             * 
+            */
         }
 
-        public void getGender()
+        public string getGender()
         {
-            throw new System.NotImplementedException();
+            /*
+             * if gender attribute matches 'f' return "female"
+             * if gender attribute matches 'm' return "male
+             * else "gender not found false;
+             * 
+            */
         }
 
-        public void setMajor(string s)
+        public bool setMajor(string s)
         {
-            throw new System.NotImplementedException();
+            //set rules sets for the students major
+
+            /*
+            * set string to major attribute
+            * return true
+            */
         }
 
-        public void getMajor()
+        public string getMajor()
         {
-            throw new System.NotImplementedException();
+           //retrun major attribute
         }
     }
 }
