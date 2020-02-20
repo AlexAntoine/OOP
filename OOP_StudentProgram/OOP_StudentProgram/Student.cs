@@ -10,7 +10,7 @@ namespace OOP_StudentProgram
         //attributes
         private string _firstName;
         private string _lastName;
-        private string _gender;
+        private char _gender;
         private string _major;
         private Dates _birthdate; //composition
 
@@ -21,76 +21,73 @@ namespace OOP_StudentProgram
 
         public bool setFirstName(string s)
         {
-           //set rules sets for the students first name
-           
-            /*
-             * student's first name can be whatever 
-             * assign the string to the first name attribute
-             * return true
-             */
+            s = _firstName;
+            return true;
         }
 
         public string getFirstName()
         {
-            //return students first name as a string 
+          
+            return _firstName;
         }
 
         public bool setLastName(string s)
-        {
-            //set rules sets for the students last name
-
-            /*
-             * student's last name can be whatever 
-             * assign the string to the last name attribute
-             * return true
-             */
-
-           
+        {          
+            s = _lastName;
+            return true;
         }
 
         public string getLastName()
-        {
-            //return students last name as a string 
+        {  
+            return _lastName;
         }
 
         public bool setGender(string s)
         {
-            //set rules sets for the students gender
-
-            /*
-             * if input match male, man. assing 'm' to gender attribute and return true
-             * if input match female or woman. assign 'f' to gender attribute and return true
-             * else return false;
-             * 
-            */
+          
+            if (s == "male" || s == "man")
+            {
+                _gender = 'm';
+                return true;
+            }
+            else if (s == "woman" || s == "man")
+            {
+               _gender = 'f';
+                return true;
+            }
+            else
+                return false;
         }
 
         public string getGender()
         {
-            /*
-             * if gender attribute matches 'f' return "female"
-             * if gender attribute matches 'm' return "male
-             * else "gender not found false;
-             * 
-            */
+            
+            if (_gender == 'f')
+            {
+                return "female";
+            }
+            else if (_gender == 'm')
+            {
+                return "male";
+            }
+            else
+                return "gender is not initialized";
         }
 
         public bool setMajor(string s)
         {
-            //set rules sets for the students major
+          
+            s = _major;
 
-            /*
-            * set string to major attribute
-            * return true
-            */
+            return true;
         }
 
         public string getMajor()
         {
-           //retrun major attribute
+            return _major;
         }
 
-        public string setBirthdat(Dates s)
+        public bool setBirthdate(Dates s)
         {
             //assgin dates object to birthdate attribute
             //return true
