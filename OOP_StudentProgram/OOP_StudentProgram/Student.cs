@@ -89,14 +89,15 @@ namespace OOP_StudentProgram
 
         public bool setBirthdate(Dates s)
         {
-            //assgin dates object to birthdate attribute
-            //return true
+            s = _birthdate;
+            return true;
+           
         }
 
         public string getBirthdate()
         {
-            //return birthdate in a string format.
-            // 00/00/0000
+            return _birthdate.getMonth() + "/" + _birthdate.getDay() + "/" + _birthdate.getYear();
+           
         }
     }
 }

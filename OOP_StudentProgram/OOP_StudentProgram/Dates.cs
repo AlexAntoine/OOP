@@ -16,61 +16,117 @@ namespace OOP_StudentProgram
             //constructor
         }
 
-        public void setDay(string s)
+        public bool setDay(string s)
         {
-          //set the the day of the birth
-          
-            /*
-             *length can only be two digits
-             * cannot be greater than 31, equal to 00, or any negative number
-             * assign string to day attribue 
-             * return true
-             * 
-             */
+         
+            if (!int.TryParse(s, out _))
+            {
+                return false;
+            }
+
+
+            if (s.Length > 2 || s == null)
+            {
+                return false;
+            }
+               
+
+            if (s[0] == '0' && s[1] == '0')
+            {
+                return false;
+            }
+                
+
+            if (s[0] < '0' || s[1] < '0')
+            {
+                return false;
+            }
+               
+
+            if (s[0] > '4')
+            {
+                return false;
+            }
+               
+
+            if (s[0] == '3' && s[1] > '1')
+            {
+                return false;
+            }
+            else
+            {
+                s = _day;
+            }
+
+              
+            return true;
+
+           
         }
 
         public int getDay()
         {
-           //convert day attribute to an int and return it 
+            return int.Parse(_day);
         }
 
         public bool setMonth(string s)
         {
-            //set the the month of birth
+        
+            if (!int.TryParse(s, out _))
+                return false;
 
-            /*
-             * only tweleve months in a year
-             * two digits only 
-             * no negatives 
-             * 00 is not allowed 
-             * assign string to month attribute 
-             * return true
-             */
+            if (s.Length > 2 || s == null)
+                return false;
+
+            if (s[0] == '0' && s[1] == '0')
+                return false;
+
+            if (s[0] < '0' || s[1] < '0')
+                return false;
+
+            if (s[0] > '1' || s[0] == '1' && s[1] > '2')
+                return false;
+
+            else
+            {
+                s = _day;
+            }
+
+            return true;
         }
 
-        public void getMonth()
+        public int getMonth()
         {
-            //convert month attribute to an int and return it 
+            return int.Parse(_month);
         }
 
         public bool setYear(string s)
         {
-            //set the the year of birth
+           
+            if (s.Length != 4)
+                return false;
 
-            /* four digits only 
-             * years before 1920 is not allowed
-             * assign string to attribute 
-             * second digit has to equal 0
-             * third digit cannot be greater than two or less than 0
-             * 
-             * return true
-             * 
-             */
+            if (!int.TryParse(s, out _))
+                return false;
+
+            if (s[0] < '1' || s[1] > '0')
+                return false;
+
+            if (s[2] > '2' || s[2] < '0' || s[3] < '0')
+                return false;
+
+            else
+            {
+                s = _year;
+            }
+           
+            return true;
+         
         }
 
         public int getYear()
         {
-            //convert year attribute to an int and return it 
+            return int.Parse(_year);
         }
     }
 }
