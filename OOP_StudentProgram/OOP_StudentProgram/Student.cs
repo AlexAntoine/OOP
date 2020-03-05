@@ -18,6 +18,15 @@ namespace OOP_StudentProgram
         {
           //constructor
         }
+        public Student(string name)
+        {
+            //Overloading Constructors
+        }
+        
+         public Student(string name, string id)
+        {
+            //Overloading Constructors
+        }
 
         public bool setFirstName(string s)
         {
